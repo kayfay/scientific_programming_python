@@ -1,4 +1,12 @@
 # -*- coding: utf-8 -*-
+"""
+A module with typing, constants variable declariation, string formatting options.
+"""
+from __future__ import print_function
+
+# Import Math Object Aliased
+import math as m
+
 
 # Mutiple formatting options
 
@@ -22,7 +30,6 @@ initial velocity v0=%d m/s
 is located at the height %g m.
 """ % (T, V0, Y))  # multi-line string
 
-import math as m
 
 YC = 0.2
 T1 = (V0 - m.sqrt(V0**2 - 2 * G * YC)) / G
@@ -45,25 +52,29 @@ print("At t={t:g} s, \nthe height of the object is {y:.2f} m".format(t=T, y=Y))
 C = 21
 F = (9 / 5) * C + 32
 
-# Import Math Object
-import math
+def math_functions():
+    """
+    Create objects of functions, math, natural log, sine, cosine
+    """
+    # import math # for shortcuts as an alias
+    # m = math
 
-m = math
-ln = m.log
-s = m.sin
-c = m.cos
+    # Functions as objects
+    ln = m.log
+    s = m.sin
+    c = m.cos
 
-# Other math functions with right hand sides
-# Hyperbolic sine function
-# sinh(x) = 0.5*(m.e**x - m.e**-x)
+    # Other math functions with right hand sides
+    # Hyperbolic sine function
+    # sinh(x) = 0.5*(m.e**x - m.e**-x)
 
-from math import sinh, exp, e, pi
+    from math import sinh, exp, e, pi
 
-x = 2 * pi
-r1 = sinh(x)
-r2 = 0.5 * (exp(x) - exp(-x))
-r3 = 0.5 * (e**x - e**(-x))
+    x = 2 * pi
+    r1 = sinh(x)
+    r2 = 0.5 * (exp(x) - exp(-x))
+    r3 = 0.5 * (e**x - e**(-x))
 
-# value conversion
-type("{x}".format(x=x))
-type("{x!s}".format(x=x))
+    # value conversion
+    type("{x}".format(x=x))
+    type("{x!s}".format(x=x))
