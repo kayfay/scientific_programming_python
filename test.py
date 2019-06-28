@@ -1,7 +1,19 @@
 # -*- coding: utf-8 -*-
 """
-Docstring: testing area for notes
+Docstring: This is a testing area.
 """
 
+from __future__ import print_function
+
+def _function():
+    """Function Docstring
+
+    Keyword arguments:
+
+    Returns:
+    """
+
+    return None
+
 if __name__ == "__main__":
-    indexing_function()
+    _function()
