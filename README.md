@@ -13,6 +13,8 @@ Contains an ipython notebook with some formulas to accompany calculations, funct
 `intro_materials` is a composit of topics introducing coding examples
 `function_formulas` contains python functions of formulas
 
+Examples of book contents as follows, also available as science_notebook.pdf
+
 ## Newton's Second Law of Motion
 
 ![$y(t) = v_0 t - \frac{1}{2} g t^2$](https://latex.codecogs.com/gif.latex?y%28t%29%20%3D%20v_0%20t%20-%20%5Cfrac%7B1%7D%7B2%7D%20g%20t%5E2)
