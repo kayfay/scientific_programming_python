@@ -698,20 +698,21 @@ Calculates energy level ![$E_n$](https://latex.codecogs.com/gif.latex?E_n) for !
 
 
 ```python
-# Symbolic computing
-from sympy import (
-    symbols,  # define symbols for symbolic math
-    lambdify,  # turn symbolic expr. into python functions
+def formula():
+    # Symbolic computing
+    from sympy import (
+        symbols,  # define symbols for symbolic math
+        lambdify,  # turn symbolic expr. into python functions
     )
 
-# declare symbolic variables
-m_e, e, epsilon_0, h, n = symbols('m_e e epsilon_0 h n')
-# formula
-En = -(m_e*e**4)/(8*epsilon_0*h**2)*(1/n**2)
+    # declare symbolic variables
+    m_e, e, epsilon_0, h, n = symbols('m_e e epsilon_0 h n')
+    # formula
+    En = -(m_e*e**4)/(8*epsilon_0*h**2)*(1/n**2)
 
-# convert to python function
-y = lambdify([m_e, e, epsilon_0, h, n],  # arguments in En
-             En)  # symbolic expression
+    # convert to python function
+    return lambdify([m_e, e, epsilon_0, h, n],  # arguments in En
+                 En)  # symbolic expression
 
 def compute_atomic_energy(m_e=9.094E-34, 
                           e=1.6022E-19, 
@@ -720,24 +721,53 @@ def compute_atomic_energy(m_e=9.094E-34,
     
     En = 0 # energy level of an atom
     for n in range(1, 20): # Compute for 1,...,20
-        En += y(m_e, e, epsilon_0, h, n)
+        En += formula()(m_e, e, epsilon_0, h, n)
     
     return En
 ```
-
 
 ```python
 compute_atomic_energy()
 ```
 
+and energy released moving from level $n_i$ to $n_f$ is 
 
-
-
-    -2.7315307541142e-32
-
-
-
+$$\Delta E = - \frac{m_{e}e^{4}}{8\epsilon_{0}^{2}h^{2}} 
+\cdot \left( \frac{1}{n_{i}^{2}} - \frac{1}{n_{f}^{2}} \right) $$
 
 ```python
+# Symbolic computing
+from sympy import (
+    symbols,  # define symbols for symbolic math
+    lambdify,  # turn symbolic expr. into python functions
+    )
 
+# declare symbolic variables
+m_e, e, epsilon_0, h, ni, nf = symbols('m_e e epsilon_0 h ni nf')
+# formula
+delta_E = -(m_e*e**4)/(8*epsilon_0*h**2)*((1/ni**2)-(1/nf**2))
+
+# convert to python function
+y = lambdify([m_e, e, epsilon_0, h, ni, nf],  # arguments in En
+             delta_E)  # symbolic expression
+
+def compute_change_in_energy(m_e=9.094E-34, 
+                             e=1.6022E-19, 
+                             epsilon_0=9.9542E-12,
+                             h=6.6261E-34):
+    print("Energy released going from level to level.")
+    En = y(m_e, e, epsilon_0, h, 2, 1) # energy at level 1
+    for n in range(2, 20): # Compute for 1,...,20
+        En += y(m_e, e, epsilon_0, h, n-1, n)
+        print("{:23.2E}  {:7} to level {:2}".format(
+            y(m_e, e, epsilon_0, h, n-1, n),
+            n-1,
+            n))
+    print("Total energy: {:.2E}".format(compute_atomic_energy()))
 ```
+
+```python
+compute_change_in_energy()
+```
+
+
