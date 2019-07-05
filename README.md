@@ -117,7 +117,7 @@ print(F)
     69.80000000000001
 
 
-## Time to reach height of $y_c$
+## Time to reach height of ![$y_c$](https://latex.codecogs.com/gif.latex?y_c)
 
 ![$y_c =v_0 t - \frac{1}{2} g t^2$](https://latex.codecogs.com/gif.latex?y_c%20%3Dv_0%20t%20-%20%5Cfrac%7B1%7D%7B2%7D%20g%20t%5E2)
 
@@ -730,10 +730,16 @@ def compute_atomic_energy(m_e=9.094E-34,
 compute_atomic_energy()
 ```
 
-and energy released moving from level $n_i$ to $n_f$ is 
 
-$$\Delta E = - \frac{m_{e}e^{4}}{8\epsilon_{0}^{2}h^{2}} 
-\cdot \left( \frac{1}{n_{i}^{2}} - \frac{1}{n_{f}^{2}} \right) $$
+
+
+    -2.7315307541142e-32
+
+
+
+and energy released moving from level ![$n_i$](https://latex.codecogs.com/gif.latex?n_i) to ![$n_f$](https://latex.codecogs.com/gif.latex?n_f) is 
+
+![$$\Delta E = - \frac{m_{e}e^{4}}{8\epsilon_{0}^{2}h^{2}} \cdot \left( \frac{1}{n_{i}^{2}} - \frac{1}{n_{f}^{2}} \right)$$](https://latex.codecogs.com/gif.latex?%5CDelta%20E%20%3D%20-%20%5Cfrac%7Bm_%7Be%7De%5E%7B4%7D%7D%7B8%5Cepsilon_%7B0%7D%5E%7B2%7Dh%5E%7B2%7D%7D%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B1%7D%7Bn_%7Bi%7D%5E%7B2%7D%7D%20-%20%5Cfrac%7B1%7D%7Bn_%7Bf%7D%5E%7B2%7D%7D%20%5Cright%29)
 
 ```python
 # Symbolic computing
@@ -770,4 +776,23 @@ def compute_change_in_energy(m_e=9.094E-34,
 compute_change_in_energy()
 ```
 
-
+    Energy released going from level to level.
+                  -1.29E-32        1 to level  2
+                  -2.38E-33        2 to level  3
+                  -8.33E-34        3 to level  4
+                  -3.86E-34        4 to level  5
+                  -2.09E-34        5 to level  6
+                  -1.26E-34        6 to level  7
+                  -8.20E-35        7 to level  8
+                  -5.62E-35        8 to level  9
+                  -4.02E-35        9 to level 10
+                  -2.97E-35       10 to level 11
+                  -2.26E-35       11 to level 12
+                  -1.76E-35       12 to level 13
+                  -1.40E-35       13 to level 14
+                  -1.13E-35       14 to level 15
+                  -9.22E-36       15 to level 16
+                  -7.65E-36       16 to level 17
+                  -6.41E-36       17 to level 18
+                  -5.42E-36       18 to level 19
+    Total energy: -2.73E-32
