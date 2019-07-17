@@ -798,7 +798,7 @@ compute_change_in_energy()
     Total energy: -2.73E-32
 
 
-## Numerical root finding, nonlinear approximation: solve $f(x) = 0$;
+## Numerical root finding, nonlinear approximation: solve ![$f(x) = 0$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%200);
   
 Given the example equation;
   
