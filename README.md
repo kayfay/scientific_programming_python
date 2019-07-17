@@ -796,3 +796,105 @@ compute_change_in_energy()
                   -6.41E-36       17 to level 18
                   -5.42E-36       18 to level 19
     Total energy: -2.73E-32
+
+
+## Numerical root finding, nonlinear approximation: solve $f(x) = 0$;
+  
+Given the example equation;
+  
+![$$x = 1 + sin \hspace{3 px} x \\ $$](https://latex.codecogs.com/gif.latex?x%20%3D%201%20&plus;%20sin%20%5Chspace%7B3%20px%7D%20x%20%5C%5C)
+
+
+Move all terms on the left hand side to make $x$ the ***root*** of the equation.
+
+![$$ f(x) = x - 1 - sin \hspace {3 px} x \\ \\ $$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%20x%20-%201%20-%20sin%20%5Chspace%20%7B3%20px%7D%20x)
+
+  Example 1: Bisection method.
+  
+  On an interval, ![$a, b$](https://latex.codecogs.com/gif.latex?%5Ba%2C%20b%5D), where the root lies that contains a root of ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) the interval is halved at ![$m=(a+b)/2$](https://latex.codecogs.com/gif.latex?m%3D%28a&plus;b%29/2) if the sign of ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) changes in the left half, ![$a, m$](https://latex.codecogs.com/gif.latex?%5Ba%2C%20m%5D), continue on that side of the halved interval, otherwise continue on the right half interval, ![$m, b$](https://latex.codecogs.com/gif.latex?%5Bm%2C%20b%5D).  The root is guaranteed to be inside an interval of length ![$2^{-n}(b-a)$](https://latex.codecogs.com/gif.latex?2%5E%7B-n%7D%28b-a%29). 
+  
+  </br>
+  
+  Example 2: Newton's method.
+  
+  ![$$x_n = x_{n-1} - \frac{f(x_{n-1})}{f'(x_{n-1})}, \quad x_{0} \hspace{6 px} given \\ \\ $$](https://latex.codecogs.com/gif.latex?x_n%20%3D%20x_%7Bn-1%7D%20-%20%5Cfrac%7Bf%28x_%7Bn-1%7D%29%7D%7Bf%27%28x_%7Bn-1%7D%29%7D%2C%20%5Cquad%20x_%7B0%7D%20%5Chspace%7B6%20px%7D%20given)
+  
+  
+  Generates a sequence ![$x_n$](https://latex.codecogs.com/gif.latex?x_n) where if the sequence converges to 0, ![$x_n$](https://latex.codecogs.com/gif.latex?x_n) approaches the root of ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29).  That is ![$x_n \rightarrow x$](https://latex.codecogs.com/gif.latex?x_n%20%5Crightarrow%20x) where ![$x$](https://latex.codecogs.com/gif.latex?x) solves the equation ![$f(x) = 0$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%200).
+  
+When $f(x)$ is not linear i.e., ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) is not in the form ![$ax+b$](https://latex.codecogs.com/gif.latex?ax&plus;b) with constant and we have a nonlinear difference equation.  If we have an approximate solution ![$x_{n-1}$](https://latex.codecogs.com/gif.latex?x_%7Bn-1%7D) and if ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) were linear, ![$f(x) = ax+b$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%20ax&plus;b), we could solve ![$f(x) = 0:x = -b/a$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%200%3Ax%20%3D%20-b/a) and if ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) is approximatly close to ![$x = x_{n-1}$](https://latex.codecogs.com/gif.latex?x%20%3D%20x_%7Bn-1%7D) then ![$f(x) \approx \tilde{f} = ax+b$](https://latex.codecogs.com/gif.latex?f%28x%29%20%5Capprox%20%5Ctilde%7Bf%7D%20%3D%20ax&plus;b), the slope would be approximately ![$a = f'(x_{n-1})$](https://latex.codecogs.com/gif.latex?a%20%3D%20f%27%28x_%7Bn-1%7D%29), ![$x = x_{n-1}$](https://latex.codecogs.com/gif.latex?x%20%3D%20x_%7Bn-1%7D), ![$b=f(x_{n-1})-x_{n-1}f'(x_{n-1})$](https://latex.codecogs.com/gif.latex?b%3Df%28x_%7Bn-1%7D%29-x_%7Bn-1%7Df%27%28x_%7Bn-1%7D%29), then the approximate line function would be 
+
+![$$\tilde{f}(x)=f(x_{n-1})-x_{n-1}f'(x_{n-1}) \\ \\ $$](https://latex.codecogs.com/gif.latex?%5Ctilde%7Bf%7D%28x%29%3Df%28x_%7Bn-1%7D%29-x_%7Bn-1%7Df%27%28x_%7Bn-1%7D%29)
+
+Which is the first two terms in Taylor series approximation, and solving for $\tilde{f}(x)=0$ 
+
+![$$x=x_{n-1}-\frac{f(x_{n-1})}{f'(x_{n-1})}$$](https://latex.codecogs.com/gif.latex?x%3Dx_%7Bn-1%7D-%5Cfrac%7Bf%28x_%7Bn-1%7D%29%7D%7Bf%27%28x_%7Bn-1%7D%29%7D).
+
+Newton's method relies on convergence to an approximation root with $N$ number of a sequence where divergence may occur, thus we increase ![$x_n$](https://latex.codecogs.com/gif.latex?x_n) until a small ![$f(x_n)$](https://latex.codecogs.com/gif.latex?f%28x_n%29) with increasing ![$n$](https://latex.codecogs.com/gif.latex?n) until ![$f(x_n) < \epsilon$](https://latex.codecogs.com/gif.latex?f%28x_n%29%20%3C%20%5Cepsilon) of some small ![$\epsilon$](https://latex.codecogs.com/gif.latex?%5Cepsilon) and some maximum ![$N$](https://latex.codcogs.com/gif.latex?N) for accounting to divergence.  
+
+
+```python
+# Example 1.
+def f(x):
+  """The function f(x) = x - 1 sin x"""
+  from math import sin
+  return x - 1 - sin(x)
+
+a = 0
+b = 10 
+fa = f(a)
+if fa*f(b) > 0:
+  m = 0
+
+i = 0
+while b-a > 1E-6:
+  i += 1
+  m = (a + b)/2.0
+  fm = f(m)
+  if fa*fm <= 0:
+    b = m
+  else:
+    a = m
+    fa = fm
+m, i
+```
+
+
+
+
+    (1.9345635175704956, 24)
+
+
+
+
+```python
+# Example 2.
+from math import sin, cos
+
+def g(x):
+  return x - 1 - sin(x)
+
+def dg(x):
+  return 1 - cos(x)
+
+x = 2
+n = 0
+N = 100
+epsilon = 1.0E-7
+f_value = g(x)
+
+while abs(f_value) > epsilon and n <= N:
+  dfdx_value = float(dg(x))
+  x = x - f_value/dfdx_value
+  n += 1
+  f_value = g(x)
+  
+x, n, f_value
+
+```
+
+
+
+
+    (1.9345632107521757, 3, 2.0539125955565396e-13)
+
