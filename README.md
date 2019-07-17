@@ -439,7 +439,11 @@ print("ratio of drag force=%.1f and gravity force=%.1f: %.1f" % \
     ratio of drag force=101368.7 and gravity force=4.2: 24030.7
 
 
+## Critical temperature of an object
+
 ![$$t=\frac{M^{2/3} c \rho^{1/3}} {K \pi^2 (4\pi/3)^{2/3}}\log{\left[0.76 \frac{\left(T_o - T_w\right)}{- T_w + T_y} \right]}$$](https://latex.codecogs.com/gif.latex?t%3D%5Cfrac%7BM%5E%7B2/3%7D%20c%20%5Crho%5E%7B1/3%7D%7D%20%7BK%20%5Cpi%5E2%20%284%5Cpi/3%29%5E%7B2/3%7D%7D%5Clog%7B%5Cleft%5B0.76%20%5Cfrac%7B%5Cleft%28T_o%20-%20T_w%5Cright%29%7D%7B-%20T_w%20&plus;%20T_y%7D%20%5Cright%5D%7D)
+
+An object heats at the center differently from it's outside, an objects center may also have a different density than it's outside.
 
 
 ```python
