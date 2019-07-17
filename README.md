@@ -117,7 +117,8 @@ print(F)
     69.80000000000001
 
 
-## Time to reach height of ![$y_c$](https://latex.codecogs.com/gif.latex?y_c)
+## Time to reach height of 
+![$y_c$](https://latex.codecogs.com/gif.latex?y_c)
 
 ![$y_c =v_0 t - \frac{1}{2} g t^2$](https://latex.codecogs.com/gif.latex?y_c%20%3Dv_0%20t%20-%20%5Cfrac%7B1%7D%7B2%7D%20g%20t%5E2)
 
@@ -143,8 +144,8 @@ print('At t=%g s and %g s, the height is %g m.' % (t1, t2, yc))
     At t=0.0417064 s and 0.977662 s, the height is 0.2 m.
 
 
-## The hyperbolic sine function ![$sinh(x) = \frac{1}{2}(e^x - e^{-x})$](https://latex.codecogs.com/gif.latex?sinh%28x%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D%28e%5Ex%20-%20e%5E%7B-x%7D%29) and other math functions with right hand sides.
-
+## The hyperbolic sine function and other math functions with right hand sides.
+![$sinh(x) = \frac{1}{2}(e^x - e^{-x})$](https://latex.codecogs.com/gif.latex?sinh%28x%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D%28e%5Ex%20-%20e%5E%7B-x%7D%29)
 
 ```python
 from math import sinh, exp, e, pi
@@ -798,8 +799,9 @@ compute_change_in_energy()
     Total energy: -2.73E-32
 
 
-## Numerical root finding, nonlinear approximation: solve ![$f(x) = 0$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%200);
-  
+## Numerical root finding, nonlinear approximation:
+solve ![$f(x) = 0$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%200);
+
 Given the example equation;
   
 ![$$x = 1 + sin \hspace{3 px} x \\ $$](https://latex.codecogs.com/gif.latex?x%20%3D%201%20&plus;%20sin%20%5Chspace%7B3%20px%7D%20x%20%5C%5C)
