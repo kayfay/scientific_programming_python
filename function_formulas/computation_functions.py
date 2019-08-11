@@ -225,4 +225,3 @@ def critical_temp(init_temp=4, final_temp=70, water_temp=100,
     return time_for_Ty(M=mass, c=heat_capacity, rho=density, K=thermal_conductivity,
                        To=init_temp, Tw=water_temp, Ty=final_temp)
 
-

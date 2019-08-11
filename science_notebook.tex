@@ -153,7 +153,6 @@
     
     
     
-    
 % Pygments definitions
 \makeatletter
 \def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
@@ -845,7 +844,13 @@ ratio of drag force=6335.5 and gravity force=4.2: 1501.9
 ratio of drag force=101368.7 and gravity force=4.2: 24030.7
 \end{Verbatim}
 
-    \[t=\frac{M^{2/3} c \rho^{1/3}} {K \pi^2 (4\pi/3)^{2/3}}\log{\left[0.76 \frac{\left(T_o - T_w\right)}{- T_w + T_y} \right]}\]
+    \subsection{Critical temperature of an
+object}\label{critical-temperature-of-an-object}
+
+\[t=\frac{M^{2/3} c \rho^{1/3}} {K \pi^2 (4\pi/3)^{2/3}}\log{\left[0.76 \frac{\left(T_o - T_w\right)}{- T_w + T_y} \right]}\]
+
+An object heats at the center differently from it's outside, an objects
+center may also have a different density than it's outside.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{90}{\hspace{4pt}}
@@ -853,16 +858,14 @@ ratio of drag force=101368.7 and gravity force=4.2: 24030.7
 \PY{k}{def} \PY{n+nf}{critical\PYZus{}temp}\PY{p}{(}\PY{n}{init\PYZus{}temp}\PY{o}{=}\PY{l+m+mi}{4}\PY{p}{,} \PY{n}{final\PYZus{}temp}\PY{o}{=}\PY{l+m+mi}{70}\PY{p}{,} \PY{n}{water\PYZus{}temp}\PY{o}{=}\PY{l+m+mi}{100}\PY{p}{,}
                   \PY{n}{mass}\PY{o}{=}\PY{l+m+mi}{47}\PY{p}{,} \PY{n}{density}\PY{o}{=}\PY{l+m+mf}{1.038}\PY{p}{,} \PY{n}{heat\PYZus{}capacity}\PY{o}{=}\PY{l+m+mf}{3.7}\PY{p}{,}
                   \PY{n}{thermal\PYZus{}conductivity}\PY{o}{=}\PY{l+m+mf}{5.4}\PY{o}{*}\PY{l+m+mi}{10}\PY{o}{*}\PY{o}{*}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{:}
-    \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}}
+    \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}Calculates the time for the center critical temp as a function }
+\PY{l+s+sd}{    of temperature of applied heat where exceeding passes a critical point.}
+
 \PY{l+s+sd}{    Heating to a temperature with prevention to exceeding critical}
 \PY{l+s+sd}{    points. Be defining critial temperature points based on}
 \PY{l+s+sd}{    composition, e.g., 63 degrees celcius outter and 70 degrees}
 \PY{l+s+sd}{    celcius inner we can express temperature and time as a}
 \PY{l+s+sd}{    function.}
-
-
-\PY{l+s+sd}{    Calculates the time for the center critical temp as a function}
-\PY{l+s+sd}{        of temperature of applied heat where exceeding passes a critical point.}
 
 \PY{l+s+sd}{    t = (M**(2/3)*c*rho**(1/3)/(K*pi**2*(4*pi/3)**(2/3)))*(ln(0.76*((To\PYZhy{}Tw)/(Ty\PYZhy{}Tw))))}
 
@@ -1351,6 +1354,73 @@ for accounting to divergence.
 \end{Verbatim}
 \end{tcolorbox}
         
+    \subparagraph{As a python program and less like a
+calculator}\label{as-a-python-program-and-less-like-a-calculator}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{3}{\hspace{4pt}}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{sys}
+
+\PY{k}{def} \PY{n+nf}{f}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{:}
+    \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}The function f(x) = x \PYZhy{} 1 sin x\PYZdq{}\PYZdq{}\PYZdq{}}
+    \PY{k+kn}{from} \PY{n+nn}{math} \PY{k}{import} \PY{n}{sin}
+    \PY{k}{return} \PY{n}{x} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1} \PY{o}{\PYZhy{}} \PY{n}{sin}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+
+\PY{n}{eps} \PY{o}{=} \PY{l+m+mf}{1E\PYZhy{}6}
+\PY{n}{a}\PY{p}{,} \PY{n}{b} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}
+
+\PY{n}{fa} \PY{o}{=} \PY{n}{f}\PY{p}{(}\PY{n}{a}\PY{p}{)}
+\PY{k}{if} \PY{n}{fa}\PY{o}{*}\PY{n}{f}\PY{p}{(}\PY{n}{b}\PY{p}{)} \PY{o}{\PYZgt{}} \PY{l+m+mi}{0}\PY{p}{:}
+    \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{f(x) does not change sign in [}\PY{l+s+si}{\PYZob{}:g\PYZcb{}}\PY{l+s+s2}{, }\PY{l+s+si}{\PYZob{}:g\PYZcb{}}\PY{l+s+s2}{]}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{)}\PY{p}{)}
+    \PY{n}{sys}\PY{o}{.}\PY{n}{exit}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+
+\PY{n}{i} \PY{o}{=} \PY{l+m+mi}{0}
+\PY{k}{while} \PY{n}{b}\PY{o}{\PYZhy{}}\PY{n}{a} \PY{o}{\PYZgt{}} \PY{n}{eps}\PY{p}{:}
+    \PY{n}{i} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+    \PY{n}{m} \PY{o}{=} \PY{p}{(}\PY{n}{a} \PY{o}{+} \PY{n}{b}\PY{p}{)}\PY{o}{/}\PY{l+m+mf}{2.0}
+    \PY{n}{fm} \PY{o}{=} \PY{n}{f}\PY{p}{(}\PY{n}{m}\PY{p}{)}
+    \PY{k}{if} \PY{n}{fa}\PY{o}{*}\PY{n}{fm} \PY{o}{\PYZlt{}}\PY{o}{=} \PY{l+m+mi}{0}\PY{p}{:}
+        \PY{n}{b} \PY{o}{=} \PY{n}{m}
+    \PY{k}{else}\PY{p}{:}
+        \PY{n}{a} \PY{o}{=} \PY{n}{m}
+        \PY{n}{fa} \PY{o}{=} \PY{n}{fm}
+    \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Iteration }\PY{l+s+si}{\PYZob{}:d\PYZcb{}}\PY{l+s+s2}{: interval=[}\PY{l+s+si}{\PYZob{}:g\PYZcb{}}\PY{l+s+s2}{, }\PY{l+s+si}{\PYZob{}:g\PYZcb{}}\PY{l+s+s2}{]}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{i}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{)}\PY{p}{)}
+\PY{n}{x} \PY{o}{=} \PY{n}{m}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{The root is }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{found in}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{i}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{iterations}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{f(}\PY{l+s+si}{\PYZob{}:g\PYZcb{}}\PY{l+s+s2}{)=}\PY{l+s+si}{\PYZob{}:g\PYZcb{}}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{f}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Iteration 1: interval=[0, 5]
+Iteration 2: interval=[0, 2.5]
+Iteration 3: interval=[1.25, 2.5]
+Iteration 4: interval=[1.875, 2.5]
+Iteration 5: interval=[1.875, 2.1875]
+Iteration 6: interval=[1.875, 2.03125]
+Iteration 7: interval=[1.875, 1.95312]
+Iteration 8: interval=[1.91406, 1.95312]
+Iteration 9: interval=[1.93359, 1.95312]
+Iteration 10: interval=[1.93359, 1.94336]
+Iteration 11: interval=[1.93359, 1.93848]
+Iteration 12: interval=[1.93359, 1.93604]
+Iteration 13: interval=[1.93359, 1.93481]
+Iteration 14: interval=[1.9342, 1.93481]
+Iteration 15: interval=[1.93451, 1.93481]
+Iteration 16: interval=[1.93451, 1.93466]
+Iteration 17: interval=[1.93451, 1.93459]
+Iteration 18: interval=[1.93455, 1.93459]
+Iteration 19: interval=[1.93455, 1.93457]
+Iteration 20: interval=[1.93456, 1.93457]
+Iteration 21: interval=[1.93456, 1.93457]
+Iteration 22: interval=[1.93456, 1.93456]
+Iteration 23: interval=[1.93456, 1.93456]
+Iteration 24: interval=[1.93456, 1.93456]
+The root is  1.9345635175704956 found in 24 iterations
+f(1.93456)=4.15984e-07)
+\end{Verbatim}
+
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{2}{\hspace{4pt}}
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -1386,13 +1456,6 @@ for accounting to divergence.
 \end{Verbatim}
 \end{tcolorbox}
         
-    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{ }{\hspace{4pt}}
-\begin{Verbatim}[commandchars=\\\{\}]
-
-\end{Verbatim}
-\end{tcolorbox}
-
 
     % Add a bibliography block to the postdoc
     
