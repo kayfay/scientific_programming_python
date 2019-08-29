@@ -1,27 +1,8 @@
-# Scientific Programming notebooks and python code
-![Book Cover](https://hplgit.github.io/scipro-primer/figs/Primer5th_pic.jpg) 
-
-
-Code and notes from reading 
-[Hans Peter Langtangen's book](https://hplgit.github.io/scipro-primer/)
-and book repo
-[Software and material](https://github.com/hplgit/scipro-primer).
-
-Contains an ipython notebook with some formulas to accompany calculations, functions and scripts for sections, and a test file.
-
-`document_format` contains notebook in distributable format like PDF
-`scipro-primer` is the source material github repo by Hans
-`function_formulas` contains python functions of formulas
-`function_dev_module` contains a testing environment for python functions
-`input_dev_module` contains a testing environment for python input functions
-`intro_materials` is a composit of topics introducing coding examples
-
-
-Examples of book contents as follows, also available as science_notebook.pdf
 
 ## Newton's Second Law of Motion
 
-![$y(t) = v_0 t - \frac{1}{2} g t^2$](https://latex.codecogs.com/gif.latex?y%28t%29%20%3D%20v_0%20t%20-%20%5Cfrac%7B1%7D%7B2%7D%20g%20t%5E2)
+$y(t) = v_0 t - \frac{1}{2} g t^2$
+
 
 ```python
 5 * 0.6 - 0.5 * 9.81 * 0.6 ** 2
@@ -36,7 +17,8 @@ Examples of book contents as follows, also available as science_notebook.pdf
 
 ## Height of an object
 
-![$y(t)=v_0t-\frac{1}{2}gt^2$](https://latex.codecogs.com/gif.latex?y%28t%29%3Dv_0t-%5Cfrac%7B1%7D%7B2%7Dgt%5E2)
+$y(t)=v_0t-\frac{1}{2}gt^2$
+
 
  * v0 as initial velocity of objects
  * g
@@ -47,12 +29,13 @@ acceleration of gravity
 With y=0 as axis of object start when t=0
 at initial time.
 
-![$v_0t-\frac{1}{2}gt^2 = t(v_0-\frac{1}{2}gt)=0 \Rightarrow
-t=0$](https://latex.codecogs.com/gif.latex?v_0t-%5Cfrac%7B1%7D%7B2%7Dgt%5E2%20%3D%20t%28v_0-%5Cfrac%7B1%7D%7B2%7Dgt%29%3D0%20%5CRightarrow%20t%3D0) or ![$t=\frac{v_0}{g}$](https://latex.codecogs.com/gif.latex?t%3D%5Cfrac%7Bv_0%7D%7Bg%7D)
+$v_0t-\frac{1}{2}gt^2 = t(v_0-\frac{1}{2}gt)=0 \Rightarrow
+t=0$ or $t=\frac{v_0}{g}$
 
  * time to move up and return to y=0, return seconds
-is ![$\frac{2 v_0}{g}$](https://latex.codecogs.com/gif.latex?%5Cfrac%7B2%20v_0%7D%7Bg%7D)
- and restricted to ![$t \in \left[ 0, \  \frac{2v_{0}}{g}\right]$](https://latex.codecogs.com/gif.latex?t%20%5Cin%20%5Cleft%5B%200%2C%20%5C%20%5Cfrac%7B2v_%7B0%7D%7D%7Bg%7D%5Cright%5D)
+is $\frac{2 v_0}{g}$
+ and restricted to $t \in \left[ 0, \  \frac{2
+v_{0}}{g}\right]$
 
 
 ```python
@@ -82,7 +65,9 @@ print(VerticalPositionOfBall)
 
 
 ## Integral calculation
-![$$\int_{-\infty}^1 e^{-x^2}dx{\thinspace .}$$](https://latex.codecogs.com/gif.latex?%5Cint_%7B-%5Cinfty%7D%5E1%20e%5E%7B-x%5E2%7Ddx%7B%5Cthinspace%20.%7D)
+$$
+\int_{-\infty}^1 e^{-x^2}dx{\thinspace .}
+$$
 
 
 ```python
@@ -121,19 +106,19 @@ print(F)
     69.80000000000001
 
 
-## Time to reach height of 
-![$y_c$](https://latex.codecogs.com/gif.latex?y_c)
+## Time to reach height of $y_c$
 
-![$y_c =v_0 t - \frac{1}{2} g t^2$](https://latex.codecogs.com/gif.latex?y_c%20%3Dv_0%20t%20-%20%5Cfrac%7B1%7D%7B2%7D%20g%20t%5E2)
+$y_c =v_0 t - \frac{1}{2} g t^2$
 
 Quadratic
 equation to solve.
 
-![$\frac{1}{2}gt^2-v_0t+y_c=0$](https://latex.codecogs.com/gif.latex?y_c%20%3Dv_0%20t%20-%20%5Cfrac%7B1%7D%7B2%7D%20g%20t%5E2)
+$\frac{1}{2}gt^2-v_0t+y_c=0$
 
-![$t_1=\Bigg(v_0-\sqrt{v_0^2-2gy_c}\Bigg)/g\quad$up$\quad(t=t_1)$](https://latex.codecogs.com/gif.latex?%24t_1%3D%5CBigg%28v_0-%5Csqrt%7Bv_0%5E2-2gy_c%7D%5CBigg%29/g%5Cquad%24up%24%5Cquad%28t%3Dt_1%29%24)
+$t_1=\Bigg(v_0-\sqrt{v_0^2-2gy_c}\Bigg)/g\quad$up$\quad(t=t_1)$
 
-![https://latex.codecogs.com/gif.latex?%24t_2%3D%5CBigg%28v_0&plus;%5Csqrt%7Bv_0%5E2-2gy_c%7D%5CBigg%29/g%5Cquad%24down%24%5Cquad%28t%3Dt_2%3Et_1%29%24](https://latex.codecogs.com/gif.latex?%24t_2%3D%5CBigg%28v_0&plus;%5Csqrt%7Bv_0%5E2-2gy_c%7D%5CBigg%29/g%5Cquad%24down%24%5Cquad%28t%3Dt_2%3Et_1%29%24)
+$t_2=\Bigg(v_0+\sqrt{v_0^2-2gy_c}\Bigg)/g\quad$down$\quad(t=t_2>t_1)$
+
 
 ```python
 v0 = 5
@@ -148,8 +133,8 @@ print('At t=%g s and %g s, the height is %g m.' % (t1, t2, yc))
     At t=0.0417064 s and 0.977662 s, the height is 0.2 m.
 
 
-## The hyperbolic sine function and other math functions with right hand sides.
-![$sinh(x) = \frac{1}{2}(e^x - e^{-x})$](https://latex.codecogs.com/gif.latex?sinh%28x%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D%28e%5Ex%20-%20e%5E%7B-x%7D%29)
+## The hyperbolic sine function $sinh(x) = \frac{1}{2}(e^x - e^{-x})$ and other math functions with right hand sides.
+
 
 ```python
 from math import sinh, exp, e, pi
@@ -238,7 +223,8 @@ If y = 0 for t then t solves y for [{},{}].
     
 
 
-![$y(t)=v_0t-\frac{1}{2}gt^2$,$t \in [0, \frac{2 v_0}{g}]$](https://latex.codecogs.com/gif.latex?y%28t%29%3Dv_0t-%5Cfrac%7B1%7D%7B2%7Dgt%5E2%2C%20t%20%5Cin%20%5B0%2C%20%5Cfrac%7B2%20v_0%7D%7Bg%7D%5D)
+$y(t)=v_0t-\frac{1}{2}gt^2$,
+$t \in [0, \frac{2 v_0}{g}]$
 
 
 ```python
@@ -253,14 +239,14 @@ f_sin.series(t, 0, 8)
 
 
 
-![$\displaystyle 1 + t + \frac{t^{2}}{2} - \frac{t^{4}}{8} - \frac{t^{5}}{15} - \frac{t^{6}}{240} + \frac{t^{7}}{90} + O\left(t^{8}\right)$](https://latex.codecogs.com/gif.latex?%5Cdisplaystyle%201%20&plus;%20t%20&plus;%20%5Cfrac%7Bt%5E%7B2%7D%7D%7B2%7D%20-%20%5Cfrac%7Bt%5E%7B4%7D%7D%7B8%7D%20-%20%5Cfrac%7Bt%5E%7B5%7D%7D%7B15%7D%20-%20%5Cfrac%7Bt%5E%7B6%7D%7D%7B240%7D%20&plus;%20%5Cfrac%7Bt%5E%7B7%7D%7D%7B90%7D%20&plus;%20O%5Cleft%28t%5E%7B8%7D%5Cright%29)
+$\displaystyle 1 + t + \frac{t^{2}}{2} - \frac{t^{4}}{8} - \frac{t^{5}}{15} - \frac{t^{6}}{240} + \frac{t^{7}}{90} + O\left(t^{8}\right)$
 
 
 
 ## Taylor Series Polynomial to approximate functions; 
-![$1 + t + \frac{t^{2}}{2} -
+$1 + t + \frac{t^{2}}{2} -
 \frac{t^{4}}{8} - \frac{t^{5}}{15} - \frac{t^{6}}{240} + \frac{t^{7}}{90} +
-O\left(t^{8}\right)$](https://latex.codecogs.com/gif.latex?1%20&plus;%20t%20&plus;%20%5Cfrac%7Bt%5E%7B2%7D%7D%7B2%7D%20-%20%5Cfrac%7Bt%5E%7B4%7D%7D%7B8%7D%20-%20%5Cfrac%7Bt%5E%7B5%7D%7D%7B15%7D%20-%20%5Cfrac%7Bt%5E%7B6%7D%7D%7B240%7D%20&plus;%20%5Cfrac%7Bt%5E%7B7%7D%7D%7B90%7D%20&plus;%20O%5Cleft%28t%5E%7B8%7D%5Cright%29)
+O\left(t^{8}\right)$
 
 
 ```python
@@ -279,7 +265,8 @@ print(expand(sin(x + y), trig=True))  # expand as trig funct
 
 
 ## Trajectory of an object
-![$$f(x) = x tan \theta - \frac{1}{2 v^{2}_{0}}\cdot\frac{gx^2}{cos^{2}\theta} + y_0$$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%20x%20tan%20%5Ctheta%20-%20%5Cfrac%7B1%7D%7B2%20v%5E%7B2%7D_%7B0%7D%7D%20%5Ccdot%20%5Cfrac%7Bgx%5E2%7D%7Bcos%5E%7B2%7D%5Ctheta%7D%20&plus;%20y_0)
+$$f(x) = x tan \theta - \frac{1}{2 v^{2}_{0}} \cdot
+\frac{gx^2}{cos^{2}\theta} + y_0$$
 
 
 ```python
@@ -352,7 +339,8 @@ miles are {miles:.3f} m
 
 
 ## Gaussian function 
-![$$f(x) = \frac{1}{\sqrt{2\pi}s} \text{exp} \Bigg[-{\frac{1}{2} \Big( \frac{x-m}{s} \Big)^2} \Bigg]$$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7Ds%7D%20%5Ctext%7Bexp%7D%20%5CBigg%5B-%7B%5Cfrac%7B1%7D%7B2%7D%20%5CBig%28%20%5Cfrac%7Bx-m%7D%7Bs%7D%20%5CBig%29%5E2%7D%20%5CBigg%5D)
+$$f(x) = \frac{1}{\sqrt{2\pi}s} \text{exp} \Bigg[
+-{\frac{1}{2} \Big( \frac{x-m}{s} \Big)^2} \Bigg]$$
 
 
 ```python
@@ -373,37 +361,38 @@ gaus_d(m = 0, s = 2, x = 1)
 
 ## Drag force due to air resistance on an object as the expression;
 
-![$$F_d =\frac{1}{2} C_D \varrho A V^2$$](https://latex.codecogs.com/gif.latex?F_d%20%3D%5Cfrac%7B1%7D%7B2%7D%20C_D%20%5Cvarrho%20A%20V%5E2)
-
+$$
+F_d =
+\frac{1}{2} C_D \varrho A V^2
+$$
 Where
- * ![$C_D$](https://latex.codecogs.com/gif.latex?C_D) drag coefficient (based on
+ * $C_D$ drag coefficient (based on
 roughness and shape)
    * As 0.4
- * ![$\varrho$](https://latex.codecogs.com/gif.latex?%5Cvarrho) is air density
+ * $\varrho$ is air density
    * Air density of
-air is ![$\varrho$](https://latex.codecogs.com/gif.latex?\varrho) = 1.2 kg/![$m^{-3}$](https://latex.codecogs.com/gif.latex?m%5E%7B-3%7D)
+air is $\varrho$ = 1.2 kg/m$^{-3}$
  * V is velocity of the object 
  * A is the
 cross-sectional area (normal to the velocity direction)
-   * ![$A = \pi a^{2}$](https://latex.codecogs.com/gif.latex?A%20%3D%20%5Cpi%20a%5E%7B2%7D) for
+   * $A = \pi a^{2}$ for
 an object with a radius $a$
-   * ![$a$](https://latex.codecogs.com/gif.latex?%24a%24) = 11 cm
+   * $a$ = 11 cm
 
 Gravity Force on an object with
-mass ![$a$](https://latex.codecogs.com/gif.latex?%24m%24) is ![$F_g = mg$](https://latex.codecogs.com/gif.latex?F_g%20%3D%20mg)
+mass $m$ is $F_g = mg$
 Where
- * ![$g$](https://latex.codecogs.com/gif.latex?%24g%24) = 9.81 m/![s$^{-2}$](https://latex.codecogs.com/gif.latex?s%5E%7B-2%7D)
+ * $g$ = 9.81 m/s$^{-2}$
  * mass = 0.43kg
 
-![$F_d$](https://latex.codecogs.com/gif.latex?F_d)
-and ![$F_g$](https://latex.codecogs.com/gif.latex?F_g)
- results
+$F_d$
+and $F_g$ results
 in a difference relationship between air
 resistance versus
 gravity at impact
 time
 
-![$$\frac{kg}{m^{-3}} \qquad and \qquad \frac{m}{s^{-2}}$$](https://latex.codecogs.com/gif.latex?%5Cfrac%7Bkg%7D%7Bm%5E%7B-3%7D%7D%20%5Cqquad%20and%20%5Cqquad%20%5Cfrac%7Bm%7D%7Bs%5E%7B-2%7D%7D)
+$$\frac{kg}{m^{-3}} \qquad and \qquad \frac{m}{s^{-2}}$$
 
 
 ```python
@@ -445,7 +434,7 @@ print("ratio of drag force=%.1f and gravity force=%.1f: %.1f" % \
 
 ## Critical temperature of an object
 
-![$$t=\frac{M^{2/3} c \rho^{1/3}} {K \pi^2 (4\pi/3)^{2/3}}\log{\left[0.76 \frac{\left(T_o - T_w\right)}{- T_w + T_y} \right]}$$](https://latex.codecogs.com/gif.latex?t%3D%5Cfrac%7BM%5E%7B2/3%7D%20c%20%5Crho%5E%7B1/3%7D%7D%20%7BK%20%5Cpi%5E2%20%284%5Cpi/3%29%5E%7B2/3%7D%7D%5Clog%7B%5Cleft%5B0.76%20%5Cfrac%7B%5Cleft%28T_o%20-%20T_w%5Cright%29%7D%7B-%20T_w%20&plus;%20T_y%7D%20%5Cright%5D%7D)
+$$t=\frac{M^{2/3} c \rho^{1/3}} {K \pi^2 (4\pi/3)^{2/3}}\log{\left[0.76 \frac{\left(T_o - T_w\right)}{- T_w + T_y} \right]}$$
 
 An object heats at the center differently from it's outside, an objects center may also have a different density than it's outside.
 
@@ -454,16 +443,14 @@ An object heats at the center differently from it's outside, an objects center m
 def critical_temp(init_temp=4, final_temp=70, water_temp=100,
                   mass=47, density=1.038, heat_capacity=3.7,
                   thermal_conductivity=5.4*10**-3):
-    """
+    """Calculates the time for the center critical temp as a function 
+    of temperature of applied heat where exceeding passes a critical point.
+
     Heating to a temperature with prevention to exceeding critical
     points. Be defining critial temperature points based on
     composition, e.g., 63 degrees celcius outter and 70 degrees
     celcius inner we can express temperature and time as a
     function.
-
-
-    Calculates the time for the center critical temp as a function
-        of temperature of applied heat where exceeding passes a critical point.
 
     t = (M**(2/3)*c*rho**(1/3)/(K*pi**2*(4*pi/3)**(2/3)))*(ln(0.76*((To-Tw)/(Ty-Tw))))
 
@@ -547,29 +534,28 @@ critical_temp(init_temp=20, mass=70)
 
 ## Newtons second law of motion in direction x and y, aka accelerations:
 
-![$F_x = ma_x$](https://latex.codecogs.com/gif.latex?F_x%20%3D%20ma_x) is the sum of force, ```m*a_x (mass * acceleration)```
+$F_x = ma_x$ is the sum of force, ```m*a_x (mass * acceleration)```
 
-![$a_x = \frac {d^{2}x}{dt^{2}}$](https://latex.codecogs.com/gif.latex?a_x%20%3D%20%5Cfrac%20%7Bd%5E%7B2%7Dx%7D%7Bdt%5E%7B2%7D%7D), ```ax = (d**2*x)/(d*t**2)```
+$a_x = \frac {d^{2}x}{dt^{2}}$, ```ax = (d**2*x)/(d*t**2)```
 
-With gravity from ![$F_x$](https://latex.codecogs.com/gif.latex?F_x) as 0 as ![$x(t)$(https://latex.codecogs.com/gif.latex?x%28t%29) is in the horizontal position at time t
+With gravity from $F_x$ as 0 as $x(t)$ is in the horizontal position at time t
 
-![$F_y = ma_y$](https://latex.codecogs.com/gif.latex?F_y%20%3D%20ma_y) is the sum of force, ```m*a_y```
+$F_y = ma_y$ is the sum of force, ```m*a_y```
 
-![$a_y = \frac {d^{2}y}{dt^{2}}$](https://latex.codecogs.com/gif.latex?a_y%20%3D%20%5Cfrac%20%7Bd%5E%7B2%7Dy%7D%7Bdt%5E%7B2%7D%7D), ```ay = (d**2*y)/(d*t**2)```
+$a_y = \frac {d^{2}y}{dt^{2}}$, ```ay = (d**2*y)/(d*t**2)```
 
-With gravity from ![$F_y$](https://latex.codecogs.com/gif.latex?F_y) as ![$-mg$](https://latex.codecogs.com/gif.latex?-mg) since ![$y(t)$](https://latex.codecogs.com/gif.latex?y%28t%29) is in the veritcal postion at time t
+With gravity from $F_y$ as $-mg$ since $y(t)$ is in the veritcal postion at time t
 
 
-Let coodinate ![$(x(t), y(t))$](https://latex.codecogs.com/gif.latex?%28x%28t%29%2C%20y%28t%29%29) be horizontal and verical positions to time t then we can integrate Newton's two components, ![$(x(t), t(t))$](https://latex.codecogs.com/gif.latex?%28x%28t%29%2C%20t%28t%29%29) using the second law twice with initial velocity and position with respect to t
+Let coodinate $(x(t), y(t))$ be horizontal and verical positions to time t then we can integrate Newton's two components, $(x(t), t(t))$ using the second law twice with initial velocity and position with respect to t
 
-![$\frac{d}{dt}x(0)=v_0 cos\theta$](https://latex.codecogs.com/gif.latex?%5Cfrac%7Bd%7D%7Bdt%7Dx%280%29%3Dv_0%20cos%5Ctheta)
+$\frac{d}{dt}x(0)=v_0 cos\theta$
 
-![$\frac{d}{dt}y(0)=v_0 sin\theta$](https://latex.codecogs.com/gif.latex?%5Cfrac%7Bd%7D%7Bdt%7Dy%280%29%3Dv_0%20sin%5Ctheta)
+$\frac{d}{dt}y(0)=v_0 sin\theta$
 
-![$x(0) = 0$](https://latex.codecogs.com/gif.latex?x%280%29%20%3D%200)
+$x(0) = 0$
 
-![$y(0) = y_0$](https://latex.codecogs.com/gif.latex?y%280%29%20%3D%20y_0)
-
+$y(0) = y_0$
 
     """
     Derive the trajectory of an object from basic physics.
@@ -617,7 +603,7 @@ Let coodinate ![$(x(t), y(t))$](https://latex.codecogs.com/gif.latex?%28x%28t%29
 
 
 ## Sine function as a polynomial
-![$$sin(x) \approx x - \frac{x^3}{3!} + \frac{x^5}{5!} + \frac{x^7}{7!} + \dotsb$$](https://latex.codecogs.com/gif.latex?sin%28x%29%20%5Capprox%20x%20-%20%5Cfrac%7Bx%5E3%7D%7B3%21%7D%20&plus;%20%5Cfrac%7Bx%5E5%7D%7B5%21%7D%20&plus;%20%5Cfrac%7Bx%5E7%7D%7B7%21%7D%20&plus;%20%5Cdotsb)
+$$sin(x) \approx x - \frac{x^3}{3!} + \frac{x^5}{5!} + \frac{x^7}{7!} + \dotsb$$
 
 
 ```python
@@ -639,7 +625,7 @@ print("sin(%g) = %g (approximation with %d terms)" % (x, s, N))
 
 ## Print table using an approximate Fahrenheit-Celcius conversiion.
 
-For the approximate formula ![$C \approx \hat{C} = (F-30)/2$](https://latex.codecogs.com/gif.latex?C%20%5Capprox%20%5Chat%7BC%7D%20%3D%20%28F-30%29/2) farenheit to celcius conversions are calculated.  Adds a third to conversation_table with an approximate value ![$\hat{C}$](https://latex.codecogs.com/gif.latex?%5Chat%7BC%7D).
+For the approximate formula $C \approx \hat{C} = (F-30)/2$ farenheit to celcius conversions are calculated.  Adds a third to conversation_table with an approximate value $\hat{C}$.
 
 
 ```python
@@ -691,19 +677,21 @@ while 1 <= n:
 
 ## Compute energy levels in an atom
 Compute the n-th energy level for an electron in an atom, e.g., 
-Hydrogen: ![$$E_n = - \frac{m_{e}e^4}{8\epsilon_{0}^{2}h^2}\cdot\frac{1}{n^2}$$](https://latex.codecogs.com/gif.latex?E_n%20%3D%20-%20%5Cfrac%7Bm_%7Be%7De%5E4%7D%7B8%5Cepsilon_%7B0%7D%5E%7B2%7Dh%5E2%7D%5Ccdot%5Cfrac%7B1%7D%7Bn%5E2%7D)
+Hydrogen: 
+
+$$E_n = - \frac{m_{e}e^4}{8\epsilon_{0}^{2}h^2}\cdot\frac{1}{n^2}$$
 
 where: 
 
-![$m_e = 9.1094 \cdot 10^{-31}$](https://latex.codecogs.com/gif.latex?m_e%20%3D%209.1094%20%5Ccdot%2010%5E%7B-31%7D)kg is the electron mass
+$m_e = 9.1094 \cdot 10^{-31}$kg is the electron mass
 
-![$e = 1.6022 \cdot 10^{-19}$](https://latex.codecogs.com/gif.latex?e%20%3D%201.6022%20%5Ccdot%2010%5E%7B-19%7D)C is the elementary charge
+$e = 1.6022 \cdot 10^{-19}$C is the elementary charge
 
-![$\epsilon_0 = 8.8542 \cdot 10^{-12}$s$^2$](https://latex.codecogs.com/gif.latex?%5Cepsilon_0%20%3D%208.8542%20%5Ccdot%2010%5E%7B-12%7D%24s%24%5E2)![kg$^{-1}$m$^{-3}$](https://latex.codecogs.com/gif.latex?kg%5E%7B-1%7Dm%5E%7B-3%7D) is electrical permittivity of vacuum
+$\epsilon_0 = 8.8542 \cdot 10^{-12}$s$^2$kg$^{-1}$m$^{-3}$ is electrical permittivity of vacuum
 
-![h = 6.6261 \cdot 10^{-34}$](https://latex.codecogs.com/gif.latex?h%20%3D%206.6261%20%5Ccdot%2010%5E%7B-34%7D)Js
+$h = 6.6261 \cdot 10^{-34}$Js
 
-Calculates energy level ![$E_n$](https://latex.codecogs.com/gif.latex?E_n) for ![$n= 1,...,20$](https://latex.codecogs.com/gif.latex?n%3D%201%2C...%2C20)
+Calculates energy level $E_n$ for $n= 1,...,20$
 
 
 ```python
@@ -735,6 +723,7 @@ def compute_atomic_energy(m_e=9.094E-34,
     return En
 ```
 
+
 ```python
 compute_atomic_energy()
 ```
@@ -746,9 +735,11 @@ compute_atomic_energy()
 
 
 
-and energy released moving from level ![$n_i$](https://latex.codecogs.com/gif.latex?n_i) to ![$n_f$](https://latex.codecogs.com/gif.latex?n_f) is 
+and energy released moving from level $n_i$ to $n_f$ is 
 
-![$$\Delta E = - \frac{m_{e}e^{4}}{8\epsilon_{0}^{2}h^{2}} \cdot \left( \frac{1}{n_{i}^{2}} - \frac{1}{n_{f}^{2}} \right)$$](https://latex.codecogs.com/gif.latex?%5CDelta%20E%20%3D%20-%20%5Cfrac%7Bm_%7Be%7De%5E%7B4%7D%7D%7B8%5Cepsilon_%7B0%7D%5E%7B2%7Dh%5E%7B2%7D%7D%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B1%7D%7Bn_%7Bi%7D%5E%7B2%7D%7D%20-%20%5Cfrac%7B1%7D%7Bn_%7Bf%7D%5E%7B2%7D%7D%20%5Cright%29)
+$$\Delta E = - \frac{m_{e}e^{4}}{8\epsilon_{0}^{2}h^{2}} 
+\cdot \left( \frac{1}{n_{i}^{2}} - \frac{1}{n_{f}^{2}} \right) $$
+
 
 ```python
 # Symbolic computing
@@ -781,6 +772,7 @@ def compute_change_in_energy(m_e=9.094E-34,
     print("Total energy: {:.2E}".format(compute_atomic_energy()))
 ```
 
+
 ```python
 compute_change_in_energy()
 ```
@@ -807,40 +799,40 @@ compute_change_in_energy()
     Total energy: -2.73E-32
 
 
-## Numerical root finding, nonlinear approximation:
-solve ![$f(x) = 0$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%200);
-
+## Numerical root finding, nonlinear approximation: solve $f(x) = 0$;
+  
 Given the example equation;
   
-![$$x = 1 + sin \hspace{3 px} x \\ $$](https://latex.codecogs.com/gif.latex?x%20%3D%201%20&plus;%20sin%20%5Chspace%7B3%20px%7D%20x%20%5C%5C)
+$$x = 1 + sin \hspace{3 px} x \\ $$
 
+Move all terms on the left hand side to make $x$ the ***root*** of the equation.
 
-Move all terms on the left hand side to make ![$x$](https://latex.codecogs.com/gif.latex?x) the ***root*** of the equation.
-
-![$$ f(x) = x - 1 - sin \hspace {3 px} x \\ \\ $$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%20x%20-%201%20-%20sin%20%5Chspace%20%7B3%20px%7D%20x)
+$$ f(x) = x - 1 - sin \hspace {3 px} x \\ \\ $$
 
   Example 1: Bisection method.
   
-  On an interval, ![$a, b$](https://latex.codecogs.com/gif.latex?%5Ba%2C%20b%5D), where the root lies that contains a root of ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) the interval is halved at ![$m=(a+b)/2$](https://latex.codecogs.com/gif.latex?m%3D%28a&plus;b%29/2) if the sign of ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) changes in the left half, ![$a, m$](https://latex.codecogs.com/gif.latex?%5Ba%2C%20m%5D), continue on that side of the halved interval, otherwise continue on the right half interval, ![$m, b$](https://latex.codecogs.com/gif.latex?%5Bm%2C%20b%5D).  The root is guaranteed to be inside an interval of length ![$2^{-n}(b-a)$](https://latex.codecogs.com/gif.latex?2%5E%7B-n%7D%28b-a%29). 
+  On an interval, $[a, b]$, where the root lies that contains a root of $f(x)$ the interval is halved at $m=(a+b)/2$ if the sign of $f(x)$ changes in the left half, $[a, m]$, continue on that side of the halved interval, otherwise continue on the right half interval, $[m, b]$.  The root is guaranteed to be inside an interval of length $2^{-n}(b-a)$. 
   
   </br>
   
   Example 2: Newton's method.
   
-  ![$$x_n = x_{n-1} - \frac{f(x_{n-1})}{f'(x_{n-1})}, \quad x_{0} \hspace{6 px} given \\ \\ $$](https://latex.codecogs.com/gif.latex?x_n%20%3D%20x_%7Bn-1%7D%20-%20%5Cfrac%7Bf%28x_%7Bn-1%7D%29%7D%7Bf%27%28x_%7Bn-1%7D%29%7D%2C%20%5Cquad%20x_%7B0%7D%20%5Chspace%7B6%20px%7D%20given)
+  $$x_n = x_{n-1} - 
+  \frac{f(x_{n-1})}{f'(x_{n-1})}, 
+  \quad x_{0} \hspace{6 px} given \\ \\ $$
   
   
-  Generates a sequence ![$x_n$](https://latex.codecogs.com/gif.latex?x_n) where if the sequence converges to 0, ![$x_n$](https://latex.codecogs.com/gif.latex?x_n) approaches the root of ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29).  That is ![$x_n \rightarrow x$](https://latex.codecogs.com/gif.latex?x_n%20%5Crightarrow%20x) where ![$x$](https://latex.codecogs.com/gif.latex?x) solves the equation ![$f(x) = 0$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%200).
+  Generates a sequence $x_n$ where if the sequence converges to 0, $x_n$ approaches the root of $f(x)$.  That is $x_n \rightarrow x$ where $x$ solves the equation $f(x) = 0$.
   
-When ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) is not linear i.e., ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) is not in the form ![$ax+b$](https://latex.codecogs.com/gif.latex?ax&plus;b) with constant and we have a nonlinear difference equation.  If we have an approximate solution ![$x_{n-1}$](https://latex.codecogs.com/gif.latex?x_%7Bn-1%7D) and if ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) were linear, ![$f(x) = ax+b$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%20ax&plus;b), we could solve ![$f(x) = 0:x = -b/a$](https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%200%3Ax%20%3D%20-b/a) and if ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) is approximatly close to ![$x = x_{n-1}$](https://latex.codecogs.com/gif.latex?x%20%3D%20x_%7Bn-1%7D) then ![$f(x) \approx \tilde{f} = ax+b$](https://latex.codecogs.com/gif.latex?f%28x%29%20%5Capprox%20%5Ctilde%7Bf%7D%20%3D%20ax&plus;b), the slope would be approximately ![$a = f'(x_{n-1})$](https://latex.codecogs.com/gif.latex?a%20%3D%20f%27%28x_%7Bn-1%7D%29), ![$x = x_{n-1}$](https://latex.codecogs.com/gif.latex?x%20%3D%20x_%7Bn-1%7D), ![$b=f(x_{n-1})-x_{n-1}f'(x_{n-1})$](https://latex.codecogs.com/gif.latex?b%3Df%28x_%7Bn-1%7D%29-x_%7Bn-1%7Df%27%28x_%7Bn-1%7D%29), then the approximate line function would be 
+When $f(x)$ is not linear i.e., $f(x)$ is not in the form $ax+b$ with constant and b we have a nonlinear difference equation.  If we have an approximate solution $x_{n-1}$ and if $f(x)$ were linear, $f(x) = ax+b$, we could solve $f(x) = 0:x = -b/a$ and if $f(x)$ is approximatly close to $x = x_{n-1}$ then $f(x) \approx \tilde{f} = ax+b$, the slope would be approximately $a = f'(x_{n-1})$, $x = x_{n-1}$, $b=f(x_{n-1})-x_{n-1}f'(x_{n-1})$, then the approximate line function would be 
 
-![$$\tilde{f}(x)=f(x_{n-1})-x_{n-1}f'(x_{n-1}) \\ \\ $$](https://latex.codecogs.com/gif.latex?%5Ctilde%7Bf%7D%28x%29%3Df%28x_%7Bn-1%7D%29-x_%7Bn-1%7Df%27%28x_%7Bn-1%7D%29)
+$$\tilde{f}(x)=f(x_{n-1})-x_{n-1}f'(x_{n-1}) \\ \\ $$
 
-Which is the first two terms in Taylor series approximation, and solving for ![$\tilde{f}(x)=0$](https://latex.codecogs.com/gif.latex?%5Ctilde%7Bf%7D%28x%29%3D0)
+Which is the first two terms in Taylor series approximation, and solving for $\tilde{f}(x)=0$ 
 
-![$$x=x_{n-1}-\frac{f(x_{n-1})}{f'(x_{n-1})}$$](https://latex.codecogs.com/gif.latex?x%3Dx_%7Bn-1%7D-%5Cfrac%7Bf%28x_%7Bn-1%7D%29%7D%7Bf%27%28x_%7Bn-1%7D%29%7D).
+$$x=x_{n-1}-\frac{f(x_{n-1})}{f'(x_{n-1})}$$.
 
-Newton's method relies on convergence to an approximation root with ![$N$](https://latex.codecogs.com/gif.latex?N) number of a sequence where divergence may occur, thus we increase ![$x_n$](https://latex.codecogs.com/gif.latex?x_n) until a small ![$f(x_n)$](https://latex.codecogs.com/gif.latex?f%28x_n%29) with increasing ![$n$](https://latex.codecogs.com/gif.latex?n) until ![$f(x_n) < \epsilon$](https://latex.codecogs.com/gif.latex?f%28x_n%29%20%3C%20%5Cepsilon) of some small ![$\epsilon$](https://latex.codecogs.com/gif.latex?%5Cepsilon) and some maximum ![$N$](https://latex.codecogs.com/gif.latex?N) for accounting to divergence.  
+Newton's method relies on convergence to an approximation root with $N$ number of a sequence where divergence may occur, thus we increase $x_n$ until a small $f(x_n)$ with increasing $n$ until $f(x_n) < \epsilon$ of some small $\epsilon$ and some maximum $N$ for accounting to divergence.  
 
 
 ```python
@@ -876,6 +868,70 @@ m, i
 
 
 
+##### As a python program and less like a calculator
+
+
+```python
+import sys
+
+def f(x):
+    """The function f(x) = x - 1 sin x"""
+    from math import sin
+    return x - 1 - sin(x)
+
+
+eps = 1E-6
+a, b = 0, 10
+
+fa = f(a)
+if fa*f(b) > 0:
+    print("f(x) does not change sign in [{:g}, {:g}]".format(a, b))
+    sys.exit(1)
+
+i = 0
+while b-a > eps:
+    i += 1
+    m = (a + b)/2.0
+    fm = f(m)
+    if fa*fm <= 0:
+        b = m
+    else:
+        a = m
+        fa = fm
+    print("Iteration {:d}: interval=[{:g}, {:g}]".format(i, a, b))
+x = m
+print("The root is ", x, "found in", i, "iterations")
+print("f({:g})={:g})".format(x, f(x)))
+```
+
+    Iteration 1: interval=[0, 5]
+    Iteration 2: interval=[0, 2.5]
+    Iteration 3: interval=[1.25, 2.5]
+    Iteration 4: interval=[1.875, 2.5]
+    Iteration 5: interval=[1.875, 2.1875]
+    Iteration 6: interval=[1.875, 2.03125]
+    Iteration 7: interval=[1.875, 1.95312]
+    Iteration 8: interval=[1.91406, 1.95312]
+    Iteration 9: interval=[1.93359, 1.95312]
+    Iteration 10: interval=[1.93359, 1.94336]
+    Iteration 11: interval=[1.93359, 1.93848]
+    Iteration 12: interval=[1.93359, 1.93604]
+    Iteration 13: interval=[1.93359, 1.93481]
+    Iteration 14: interval=[1.9342, 1.93481]
+    Iteration 15: interval=[1.93451, 1.93481]
+    Iteration 16: interval=[1.93451, 1.93466]
+    Iteration 17: interval=[1.93451, 1.93459]
+    Iteration 18: interval=[1.93455, 1.93459]
+    Iteration 19: interval=[1.93455, 1.93457]
+    Iteration 20: interval=[1.93456, 1.93457]
+    Iteration 21: interval=[1.93456, 1.93457]
+    Iteration 22: interval=[1.93456, 1.93456]
+    Iteration 23: interval=[1.93456, 1.93456]
+    Iteration 24: interval=[1.93456, 1.93456]
+    The root is  1.9345635175704956 found in 24 iterations
+    f(1.93456)=4.15984e-07)
+
+
 
 ```python
 # Example 2.
@@ -909,10 +965,11 @@ x, n, f_value
     (1.9345632107521757, 3, 2.0539125955565396e-13)
 
 
+
 ## Newton's second law of motion
 
-A car driver driving at velocity ![$v_0$](https://latex.codecogs.com/gif.latex?v_0) breaks, how to determine the stopping diststance. Newtons second law of motion, an energy equation; 
-![$$d = \frac{1}{2} \frac{v_0^2}{\mu g}$$](https://latex.codecogs.com/gif.latex?d%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cfrac%7Bv_0%5E2%7D%7B%5Cmu%20g%7D)
+A car driver driving at velocity $v_0$ breaks, how to determine the stopping diststance. Newtons second law of motion, an energy equation; 
+$$d = \frac{1}{2} \frac{v_0^2}{\mu g}$$
 
 
 ```python
@@ -956,15 +1013,15 @@ stopping_length_function()
 
 
 ## A hat function translated into if, else if, else clause
-Widely used in advanced computer simulations, a ![$hat function$](https://latex.codecogs.com/gif.latex?hat%20function) can be represented as an branching statement.
+Widely used in advanced computer simulations, a $hat function$ can be represented as an branching statement.
 
-![$$N(x) = 
+$$N(x) = 
 \begin{cases}
  0, & \quad x < 0 \\
  x,  & \quad 0 \le x < 1 \\
  2-x, & \quad 1 \le x < 2 \\ 
  0, & \quad x \ge 2
-\end{cases}$$](https://latex.codecogs.com/gif.latex?%24%24N%28x%29%20%3D%20%5Cbegin%7Bcases%7D%200%2C%20%26%20%5Cquad%20x%20%3C%200%20%5C%5C%20x%2C%20%26%20%5Cquad%200%20%5Cle%20x%20%3C%201%20%5C%5C%202-x%2C%20%26%20%5Cquad%201%20%5Cle%20x%20%3C%202%20%5C%5C%200%2C%20%26%20%5Cquad%20x%20%5Cge%202%20%5Cend%7Bcases%7D%24%24)
+\end{cases}$$
 
 
 ```python
@@ -980,8 +1037,8 @@ def N(x):
 ```
 
 ## Numerical integration by the Simpson's rule:
-Given an integral, ![$$\int_a^b f(x)dx$$](https://latex.codecogs.com/gif.latex?%5Cint_a%5Eb%20f%28x%29dx) it's approximation is given by the Simpson's rule.
-![$$\frac{b-a}{3n} \Bigg( f(a) + f(b) + 4 \sum^{n/2}_{i=1} f(a+2i-1)h) + 2 \sum^{n/2-1}_{i=1} f(a+2ih) \Bigg)$$](https://latex.codecogs.com/gif.latex?%5Cfrac%7Bb-a%7D%7B3n%7D%20%5CBigg%28%20f%28a%29%20&plus;%20f%28b%29%20&plus;%204%20%5Csum%5E%7Bn/2%7D_%7Bi%3D1%7D%20f%28a&plus;2i-1%29h%29%20&plus;%202%20%5Csum%5E%7Bn/2-1%7D_%7Bi%3D1%7D%20f%28a&plus;2ih%29%20%5CBigg%29)
+Given an integral, $$\int_a^b f(x)dx$$ it's approximation is given by the Simpson's rule.
+$$\frac{b-a}{3n} \Bigg( f(a) + f(b) + 4 \sum^{n/2}_{i=1} f(a+2i-1)h) + 2 \sum^{n/2-1}_{i=1} f(a+2ih) \Bigg)$$
 
 
 
@@ -1018,7 +1075,7 @@ def test_Simpson():
 ```
 
 #### Using the integral:
-![$$\int_{3/2}^{2} (3x^2 - 7x + 2.5) dx$$](https://latex.codecogs.com/gif.latex?%5Cint_%7B3/2%7D%5E%7B2%7D%20%283x%5E2%20-%207x%20&plus;%202.5%29%20dx)
+$$\int_{3/2}^{2} (3x^2 - 7x + 2.5) dx$$
 
 
 ```python
@@ -1045,9 +1102,9 @@ Simpson(h, a, b)
 
 
 ### Compute a polynomial via a product
-Given ![$n + 1$](https://latex.codecogs.com/gif.latex?n%20&plus;%201) roots ![$ r_0, r_1, \dots, r_n$](https://latex.codecogs.com/gif.latex?r_0%2C%20r_1%2C%20%5Cdots%2C%20r_n) of a 
-polynomial ![$p(x)$](https://latex.codecogs.com/gif.latex?p%28x%29) of degree ![$n+1, p(x)$](https://latex.codecogs.com/gif.latex?n&plus;1%2C%20p%28x%29) can be computed by 
-![$$p(x) = \prod_{i=0}^{n}(x-r_i)=(x-r_0)(x-r_1)\cdots(x-r_{n-1})(x-r_n)$$](https://latex.codecogs.com/gif.latex?p%28x%29%20%3D%20%5Cprod_%7Bi%3D0%7D%5E%7Bn%7D%28x-r_i%29%3D%28x-r_0%29%28x-r_1%29%5Ccdots%28x-r_%7Bn-1%7D%29%28x-r_n%29)
+Given $n + 1$ roots $ r_0, r_1, \dots, r_n$ of a 
+polynomial $p(x)$ of degree $n+1, p(x)$ can be computed by 
+$$p(x) = \prod_{i=0}^{n}(x-r_i)=(x-r_0)(x-r_1)\cdots(x-r_{n-1})(x-r_n)$$
 
 
 ```python
@@ -1065,10 +1122,10 @@ poly
 
 
 ### Integrate a function by the Trapezoidal rule
-An approximation to the integral of a function ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) over an interval ![$[a, b]$](https://latex.codecogs.com/gif.latex?%5Ba%2C%20b%5D)
-can be found by approximating ![$f(x)$](https://latex.codecogs.com/gif.latex?f%28x%29) by the straight line of ![$(a, f(a))$](https://latex.codecogs.com/gif.latex?%28a%2C%20f%28a%29%29) and ![$(b, f(b))$](https://latex.codecogs.com/gif.latex?%28b%2C%20f%28b%29%29)
+An approximation to the integral of a function $f(x)$ over an interval $[a, b]$
+can be found by approximating $f(x)$ by the straight line of $(a, f(a))$ and $(b, f(b))$
 and then finding the area under the straight line, which is the area of a trapezoid.
-![$$\int_a^b f(x)dx \approx \frac{b-a}{2} (f(a)+f(b))$$](https://latex.codecogs.com/gif.latex?%5Cint_a%5Eb%20f%28x%29dx%20%5Capprox%20%5Cfrac%7Bb-a%7D%7B2%7D%20%28f%28a%29&plus;f%28b%29%29)
+$$\int_a^b f(x)dx \approx \frac{b-a}{2} (f(a)+f(b))$$
 
 
 ```python
@@ -1229,7 +1286,7 @@ area
 
 
 ### Midpoint integration rule
-![$$\int_a^b f(x)dx \approx h \sum_{i=0}^{n-1} f(a + ih + \frac{1}{2} h)$$](https://latex.codecogs.com/gif.latex?%5Cint_a%5Eb%20f%28x%29dx%20%5Capprox%20h%20%5Csum_%7Bi%3D0%7D%5E%7Bn-1%7D%20f%28a%20&plus;%20ih%20&plus;%20%5Cfrac%7B1%7D%7B2%7D%20h%29%24)
+$$\int_a^b f(x)dx \approx h \sum_{i=0}^{n-1} f(a + ih + \frac{1}{2} h)$$
 
 
 ```python
@@ -1253,18 +1310,18 @@ midpointint(f, 0, 5, 10)
 
 
 ### Adaptive Trapezoidal rule
-By using the following equation, a maximum ![$|f''(x)|$](https://latex.codecogs.com/gif.latex?%7Cf%27%27%28x%29%7C) can be computed by evaluating ![$f''(x)$](https://latex.codecogs.com/gif.latex?f%27%27%28x%29) 
-at large points in $[a, b]$ of the absolute value of ![$|f''(x)|$](https://latex.codecogs.com/gif.latex?%7Cf%27%27%28x%29%7C).
-![$$ E \le \frac{1}{12} (b-a) h^2 \max_{X \in |a,b|} |f''(x)|$$](https://latex.codecogs.com/gif.latex?E%20%5Cle%20%5Cfrac%7B1%7D%7B12%7D%20%28b-a%29%20h%5E2%20%5Cmax_%7BX%20%5Cin%20%7Ca%2Cb%7C%7D%20%7Cf%27%27%28x%29%7C)
-where ![$E \le \epsilon$](https://latex.codecogs.com/gif.latex?E%20%5Cle%20%5Cepsilon) and ![$E$](https://latex.codecogs.com/gif.latex?E) is the difference between the exact integral and that produced by the trapezoidal rule, and ![$\epsilon$](https://latex.codecogs.com/gif.latex?%5Cepsilon) is a small number.
+By using the following equation, a maximum $|f''(x)|$ can be computed by evaluating $f''(x)$ 
+at large points in $[a, b]$ of the absolute value of $|f''(x)|$.
+$$ E \le \frac{1}{12} (b-a) h^2 \max_{X \in |a,b|} |f''(x)|$$
+where $E \le \epsilon$ and $E$ is the difference between the exact integral and that produced by the trapezoidal rule, and $\epsilon$ is a small number.
 
 The double derivative can be computed by a finite difference formula: 
-![$$f''(x) \approx \frac{f(x+h)-2f(x)+f(x-h)}{h^2}$$](https://latex.codecogs.com/gif.latex?f%27%27%28x%29%20%5Capprox%20%5Cfrac%7Bf%28x&plus;h%29-2f%28x%29&plus;f%28x-h%29%7D%7Bh%5E2%7D)
+$$f''(x) \approx \frac{f(x+h)-2f(x)+f(x-h)}{h^2}$$
 
-With the estimated max ![$|f''(x)|$](https://latex.codecogs.com/gif.latex?%7Cf%27%27%28x%29%7C) and finding h from setting the right hand side equal to the desired tolerance: ![$$\frac{1}{12} (b-a) h^2 \max_{X \in |a,b|} |f''(x)| = \epsilon$$](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B12%7D%20%28b-a%29%20h%5E2%20%5Cmax_%7BX%20%5Cin%20%7Ca%2Cb%7C%7D%20%7Cf%27%27%28x%29%7C%20%3D%20%5Cepsilon)
+With the estimated max $|f''(x)|$ and finding h from setting the right hand side equal to the desired tolerance: $$\frac{1}{12} (b-a) h^2 \max_{X \in |a,b|} |f''(x)| = \epsilon$$
 
-Solving with respect to h gives ![$$h = \sqrt{12\epsilon} \Bigg((b-a) \max_{X\in[a,b]}|f''(x)|\Bigg)^{1/2}$$](https://latex.codecogs.com/gif.latex?h%20%3D%20%5Csqrt%7B12%5Cepsilon%7D%20%5CBigg%28%28b-a%29%20%5Cmax_%7BX%5Cin%5Ba%2Cb%5D%7D%7Cf%27%27%28x%29%7C%5CBigg%29%5E%7B1/2%7D)
-With ![$n = (b-a)/h$](https://latex.codecogs.com/gif.latex?n%20%3D%20%28b-a%29/h<Paste>) we have n that corresponds to the desired accuracy ![$\epsilon$](https://latex.codecogs.com/gif.latex?%5Cepsilon).
+Solving with respect to h gives $$h = \sqrt{12\epsilon} \Bigg((b-a) \max_{X\in[a,b]}|f''(x)|\Bigg)^{1/2}$$
+With $n = (b-a)/h$ we have n that corresponds to the desired accuracy $\epsilon$.
 
 
 ```python
@@ -1291,7 +1348,7 @@ def adaptive_trapezint(f, a, b, eps=1E-5):
 ```
 
 ### Area of a triangle
-![$$A = \frac{1}{2}|x_2y_3-x_3y_2-x_1y_3+x_3y_1+x_1y_2-x_2y_1|$$](https://latex.codecogs.com/gif.latex?A%20%3D%20%5Cfrac%7B1%7D%7B2%7D%7Cx_2y_3-x_3y_2-x_1y_3&plus;x_3y_1&plus;x_1y_2-x_2y_1%7C)
+$$A = \frac{1}{2}|x_2y_3-x_3y_2-x_1y_3+x_3y_1+x_1y_2-x_2y_1|$$
 
 
 ```python
@@ -1304,8 +1361,8 @@ def triangle_area(vertices):
 ```
 
 ### Computing the length of a path
-The total length ![$L$](https://latex.codecogs.com/gif.latex?L) of a path from ![$(x_0, y_0)$](https://latex.codecogs.com/gif.latex?%28x_0%2C%20y_0%29) to ![$(x_n, y_n)$](https://latex.codecogs.com/gif.latex?%28x_n%2C%20y_n%29) is the sum of the individual line segments ![$((x_{i-1},y_{i-1})$](https://latex.codecogs.com/gif.latex?%28%28x_%7Bi-1%7D%2Cy_%7Bi-1%7D%29) to ![$(x_i,y_i),i=1,\dots,n)$](https://latex.codecogs.com/gif.latex?%28x_i%2Cy_i%29%2Ci%3D1%2C%5Cdots%2Cn%29)
-![$$ L = \sum^n_{i=1} \sqrt{(x_i-x_{i-1})^2+(y_i-y_{i-1})^2}$$](https://latex.codecogs.com/gif.latex?L%20%3D%20%5Csum%5En_%7Bi%3D1%7D%20%5Csqrt%7B%28x_i-x_%7Bi-1%7D%29%5E2&plus;%28y_i-y_%7Bi-1%7D%29%5E2%7D)
+The total length $L$ of a path from $(x_0, y_0)$ to $(x_n, y_n)$ is the sum of the individual line segments $((x_{i-1},y_{i-1})$ to $(x_i,y_i),i=1,\dots,n)$
+$$ L = \sum^n_{i=1} \sqrt{(x_i-x_{i-1})^2+(y_i-y_{i-1})^2}$$
 
 
 ```python
@@ -1350,4 +1407,4 @@ def test_pathlength():
 
 ```python
 test_pathlength() # all pass
-`
+```

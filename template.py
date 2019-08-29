@@ -29,12 +29,10 @@ def _function():
 
 
 def test_function():
-
-    def test():
-        """Some test case docstring"""
-        _function()
-
-        return None
+    """Some test case docstring"""
+    success = _function() == "Some test case"
+    msg = "{:s} failed".format(_function.__name__)
+    assert success, msg
 
 
 if __name__ == "__main__":
