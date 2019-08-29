@@ -1262,7 +1262,7 @@ where ![$E \le \epsilon$](https://latex.codecogs.com/gif.latex?E%20%5Cle%20%5Cep
 The double derivative can be computed by a finite difference formula: 
 ![$$f''(x) \approx \frac{f(x+h)-2f(x)+f(x-h)}{h^2}$$](https://latex.codecogs.com/gif.latex?f%27%27%28x%29%20%5Capprox%20%5Cfrac%7Bf%28x&plus;h%29-2f%28x%29&plus;f%28x-h%29%7D%7Bh%5E2%7D)
 
-With the estimated max ![$|f''(x)|$](https://latex.codecogs.com/gif.latex?%7Cf%27%27%28x%29%7C) and finding h from setting the right hand side equal to the desired tolerance: ![$$\frac{1}{12} (b-a) h^2 \max_{X \in |a,b|} |f''(x)| = \epsilon$$](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B12%7D%20%28b-a%29%20h%5E2%20%5Cmax_%7BX%20%5Cin%20%7Ca%2Cb%7C%7D%20%7Cf%27%27%28x%29%7C%20%3D%20%5Cepsilon)
+With the estimated max ![$\|f''(x)\|$](https://latex.codecogs.com/gif.latex?%7Cf%27%27%28x%29%7C) and finding h from setting the right hand side equal to the desired tolerance: ![$$\frac{1}{12} (b-a) h^2 \max_{X \in \|a,b\|} \|f''(x)\| = \epsilon$$](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B12%7D%20%28b-a%29%20h%5E2%20%5Cmax_%7BX%20%5Cin%20%7Ca%2Cb%7C%7D%20%7Cf%27%27%28x%29%7C%20%3D%20%5Cepsilon)
 
 Solving with respect to h gives ![$$h = \sqrt{12\epsilon} \Bigg((b-a) \max_{X\in[a,b]}|f''(x)|\Bigg)^{1/2}$$](https://latex.codecogs.com/gif.latex?h%20%3D%20%5Csqrt%7B12%5Cepsilon%7D%20%5CBigg%28%28b-a%29%20%5Cmax_%7BX%5Cin%5Ba%2Cb%5D%7D%7Cf%27%27%28x%29%7C%5CBigg%29%5E%7B1/2%7D)
 With ![$n = (b-a)/h$](https://latex.codecogs.com/gif.latex?n%20%3D%20%28b-a%29/h<Paste>) we have n that corresponds to the desired accuracy ![$\epsilon$](https://latex.codecogs.com/gif.latex?%5Cepsilon).
