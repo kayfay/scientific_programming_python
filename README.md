@@ -9,17 +9,12 @@ and book repo
 
 Contains an ipython notebook with some formulas to accompany calculations, functions and scripts for sections, and a test file.
 
-`document_format` contains notebook in distributable format like PDF
-
-`scipro-primer` is the source material github repo by Hans
-
-`function_formulas` contains python functions of formulas
-
-`function_dev_module` contains a testing environment for python functions
-
-`input_dev_module` contains a testing environment for python input functions
-
-`intro_materials` is a composit of topics introducing coding examples
+	`document_format` contains notebook in distributable format like PDF
+	`scipro-primer` is the source material github repo by Hans
+	`function_formulas` contains python functions of formulas
+	`function_dev_module` contains a testing environment for python functions
+	`input_dev_module` contains a testing environment for python input functions
+	`intro_materials` is a composit of topics introducing coding examples
 
 
 Examples of book contents as follows, also available as science_notebook.pdf
