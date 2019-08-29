@@ -1108,7 +1108,7 @@ plt.show()
 
 
 
-![png](output_67_1.png)
+![output_67_1.png](https://raw.githubusercontent.com/kayfay/scientific_programming_python/master/document_format/markdown_document_format/output_67_1.png)
 
 
 
@@ -1186,7 +1186,8 @@ fig.suptitle("Approx: " + str(a1+a2) + " Actual: " \
 
 
 
-![png](output_71_2.png)
+![output_71_2.png](https://raw.githubusercontent.com/kayfay/scientific_programming_python/master/document_format/markdown_document_format/output_71_2.png)
+
 
 
 
