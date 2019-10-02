@@ -1,47 +1,33 @@
 """
-Docstring: This is a testing area.
+expsin_function(t)
+expsin_a_function(t, a)
+f2c_function(F)
+c2f_function(C)
+double(a)
+test_sum_1k()
+sum_1k(M)
+roots_quadratic(a, b, c)
+sum_function(args)
+poly(_product_function(x, roots)
+trapint1(f, a, b)
+trapint2(f, a, b)
+trapezint(f, a, b, n)
+midpoint(f, a, b, n)
+adaptive_trapezint(f, a, b, eps)
+triangle_area(vertices)
+pathlength(x, y)
+heaviside_function(x)
 """
 from __future__ import print_function
 
-def test_function():
-
-    def test():
-        """Some test case docstring"""
-        _function()
-
-        return None
-
-def _function():
-    """This is a oneline docstring.
-
-    This is a short summary of the function. These are some repeated lines.
-    These are some repeated lines. These are some repeated lines. These
-    are some repeated lines.
-
-    Examples on usage:
-    >>> def _function(arg1, arg2, arg3):
-    >>>    return None, None, None
-    >>> x, y, z = _function(a=0, b=10, c=20)
-
-    Keyword arguments:
-        arg 1: parameter definition
-        arg 2: parameter definition
-        arg 3: parameter definition
-
-    Returns tuple None, None, None:
-        (x, y, z)
-
-    """
-    return None
-
 
 def expsin_function(t):
-    from math import sin, pi
+    from math import sin, pi, e
     return (e**-t)*sin(pi*t)
 
 
 def expsin_a_function(t, a=1):
-    from math import sin, pi
+    from math import sin, pi, e
     return (e**(-t*a))*sin(pi*t)
 
 
@@ -136,11 +122,13 @@ def test_poly_product_function():
     msg = "x:{}, roots:{} in poly_product_function != -18".format(x, roots)
     assert success, msg
 
+
 def poly_product_function(x, roots):
     poly = 1
     for r in roots:
         poly *= x - r
     return poly
+
 
 def trapzint1(f, a=0, b=5):
     return (b-a)/2 * (f(a) + f(b))
@@ -229,13 +217,28 @@ def pathlength(x, y):
         y_list.append(yi-y[i-1]**2)
 
     from math import sqrt
-    return sum([sqrt(abs(i)) for i in list(map(sum, zip(X, Y)))])
+    return sum([sqrt(abs(i)) for i in list(map(sum, zip(x_list, y_list)))])
 
 
 def test_pathlength():
-    success = round(pathlength([1, 2], [2, 4])) == 29
-    msg = "pathlength for [1, 2], [2, 4] != approx 29"
+    success = round(pathlength([1, 2], [2, 4])) == 5
+    msg = "pathlength for [1, 2], [2, 4] != approx 5"
     assert success, msg
+
+
+def heaviside_function(x):
+    if x < 0:
+        return 0
+    else:
+        return 1
+
+
+def test_H():
+    assert heaviside_function(-10) == 0
+    assert heaviside_function(-10E-15) == 0
+    assert heaviside_function(0) == 1
+    assert heaviside_function(10E-15) == 1
+    assert heaviside_function(10) == 1
 
 
 if __name__ == "__main__":
