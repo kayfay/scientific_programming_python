@@ -132,7 +132,7 @@ equation to solve.
 
 ![$t_1=\Bigg(v_0-\sqrt{v_0^2-2gy_c}\Bigg)/g\quad$up$\quad(t=t_1)$](https://latex.codecogs.com/svg.latex?t_1=\Bigg(v_0-\sqrt{v_0^2-2gy_c}\Bigg)/g\quad$up$\quad(t=t_1))
 
-![https://latex.codecogs.com/gif.latex?%24t_2%3D%5CBigg%28v_0&plus;%5Csqrt%7Bv_0%5E2-2gy_c%7D%5CBigg%29/g%5Cquad%24down%24%5Cquad%28t%3Dt_2%3Et_1%29%24](https://latex.codecogs.com/gif.latex?%24t_2%3D%5CBigg%28v_0&plus;%5Csqrt%7Bv_0%5E2-2gy_c%7D%5CBigg%29/g%5Cquad%24down%24%5Cquad%28t%3Dt_2%3Et_1%29%24)
+![t_2=\Bigg(v_0+\sqrt{v_0^2-2gy_c}\Bigg)/g\quad$down$\quad(t=t_2>t_1)](https://latex.codecogs.com/svg.latex?t_2=\Bigg(v_0+\sqrt{v_0^2-2gy_c}\Bigg)/g\quad$down$\quad(t=t_2%3Et_1))
 
 ```python
 v0 = 5
