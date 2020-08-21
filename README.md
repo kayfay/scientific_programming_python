@@ -130,7 +130,7 @@ equation to solve.
 
 ![$\frac{1}{2}gt^2-v_0t+y_c=0$](https://latex.codecogs.com/gif.latex?y_c%20%3Dv_0%20t%20-%20%5Cfrac%7B1%7D%7B2%7D%20g%20t%5E2)
 
-![$t_1=\Bigg(v_0-\sqrt{v_0^2-2gy_c}\Bigg)/g\quad$up$\quad(t=t_1)$](https://latex.codecogs.com/gif.latex?%24t_1%3D%5CBigg%28v_0-%5Csqrt%7Bv_0%5E2-2gy_c%7D%5CBigg%29/g%5Cquad%24up%24%5Cquad%28t%3Dt_1%29%24)
+![$t_1=\Bigg(v_0-\sqrt{v_0^2-2gy_c}\Bigg)/g\quad$up$\quad(t=t_1)$](https://latex.codecogs.com/svg.latex?t_1=\Bigg(v_0-\sqrt{v_0^2-2gy_c}\Bigg)/g\quad$up$\quad(t=t_1))
 
 ![https://latex.codecogs.com/gif.latex?%24t_2%3D%5CBigg%28v_0&plus;%5Csqrt%7Bv_0%5E2-2gy_c%7D%5CBigg%29/g%5Cquad%24down%24%5Cquad%28t%3Dt_2%3Et_1%29%24](https://latex.codecogs.com/gif.latex?%24t_2%3D%5CBigg%28v_0&plus;%5Csqrt%7Bv_0%5E2-2gy_c%7D%5CBigg%29/g%5Cquad%24down%24%5Cquad%28t%3Dt_2%3Et_1%29%24)
 
