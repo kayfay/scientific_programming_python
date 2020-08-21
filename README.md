@@ -121,8 +121,7 @@ print(F)
     69.80000000000001
 
 
-## Time to reach height of 
-![$y_c$](https://latex.codecogs.com/gif.latex?y_c)
+## Time to reach height of ![$y_c$](https://latex.codecogs.com/gif.latex?y_c)
 
 ![$y_c =v_0 t - \frac{1}{2} g t^2$](https://latex.codecogs.com/gif.latex?y_c%20%3Dv_0%20t%20-%20%5Cfrac%7B1%7D%7B2%7D%20g%20t%5E2)
 
