@@ -386,12 +386,12 @@ air is ![$\varrho$](https://latex.codecogs.com/gif.latex?\varrho) = 1.2 kg/![$m^
 cross-sectional area (normal to the velocity direction)
    * ![$A = \pi a^{2}$](https://latex.codecogs.com/gif.latex?A%20%3D%20%5Cpi%20a%5E%7B2%7D) for
 an object with a radius $a$
-   * ![$a$](https://latex.codecogs.com/gif.latex?%24a%24) = 11 cm
+   * ![$a$](https://latex.codecogs.com/svg.latex?a) = 11 cm
 
 Gravity Force on an object with
-mass ![$a$](https://latex.codecogs.com/gif.latex?%24m%24) is ![$F_g = mg$](https://latex.codecogs.com/gif.latex?F_g%20%3D%20mg)
+mass ![$a$](https://latex.codecogs.com/svg.latex?a) is ![$F_g = mg$](https://latex.codecogs.com/gif.latex?F_g%20%3D%20mg)
 Where
- * ![$g$](https://latex.codecogs.com/gif.latex?%24g%24) = 9.81 m/![s$^{-2}$](https://latex.codecogs.com/gif.latex?s%5E%7B-2%7D)
+ * ![$g$](https://latex.codecogs.com/gif.latex?g) = 9.81 m/![s$^{-2}$](https://latex.codecogs.com/gif.latex?s%5E%7B-2%7D)
  * mass = 0.43kg
 
 ![$F_d$](https://latex.codecogs.com/gif.latex?F_d)
@@ -550,7 +550,7 @@ critical_temp(init_temp=20, mass=70)
 
 ![$a_x = \frac {d^{2}x}{dt^{2}}$](https://latex.codecogs.com/gif.latex?a_x%20%3D%20%5Cfrac%20%7Bd%5E%7B2%7Dx%7D%7Bdt%5E%7B2%7D%7D), ```ax = (d**2*x)/(d*t**2)```
 
-With gravity from ![$F_x$](https://latex.codecogs.com/gif.latex?F_x) as 0 as ![$x(t)$(https://latex.codecogs.com/gif.latex?x%28t%29) is in the horizontal position at time t
+With gravity from ![$F_x$](https://latex.codecogs.com/gif.latex?F_x) as 0 as ![$x(t)$](https://latex.codecogs.com/gif.latex?x%28t%29) is in the horizontal position at time t
 
 ![$F_y = ma_y$](https://latex.codecogs.com/gif.latex?F_y%20%3D%20ma_y) is the sum of force, ```m*a_y```
 
@@ -963,7 +963,7 @@ Widely used in advanced computer simulations, a ![$hat function$](https://latex.
  x,  & \quad 0 \le x < 1 \\
  2-x, & \quad 1 \le x < 2 \\ 
  0, & \quad x \ge 2
-\end{cases}$$](https://latex.codecogs.com/gif.latex?%24%24N%28x%29%20%3D%20%5Cbegin%7Bcases%7D%200%2C%20%26%20%5Cquad%20x%20%3C%200%20%5C%5C%20x%2C%20%26%20%5Cquad%200%20%5Cle%20x%20%3C%201%20%5C%5C%202-x%2C%20%26%20%5Cquad%201%20%5Cle%20x%20%3C%202%20%5C%5C%200%2C%20%26%20%5Cquad%20x%20%5Cge%202%20%5Cend%7Bcases%7D%24%24)
+\end{cases}$$](https://latex.codecogs.com/gif.latex?N(x)%20%3D%20%0A%5Cbegin%7Bcases%7D%0A%200%2C%20%26%20%5Cquad%20x%20%3C%200%20%5C%5C%0A%20x%2C%20%20%26%20%5Cquad%200%20%5Cle%20x%20%3C%201%20%5C%5C%0A%202-x%2C%20%26%20%5Cquad%201%20%5Cle%20x%20%3C%202%20%5C%5C%20%0A%200%2C%20%26%20%5Cquad%20x%20%5Cge%202%0A%5Cend%7Bcases%7D)
 
 
 ```python
@@ -1229,7 +1229,7 @@ area
 
 
 ### Midpoint integration rule
-![$$\int_a^b f(x)dx \approx h \sum_{i=0}^{n-1} f(a + ih + \frac{1}{2} h)$$](https://latex.codecogs.com/gif.latex?%5Cint_a%5Eb%20f%28x%29dx%20%5Capprox%20h%20%5Csum_%7Bi%3D0%7D%5E%7Bn-1%7D%20f%28a%20&plus;%20ih%20&plus;%20%5Cfrac%7B1%7D%7B2%7D%20h%29%24)
+![$$\int_a^b f(x)dx \approx h \sum_{i=0}^{n-1} f(a + ih + \frac{1}{2} h)$$](https://latex.codecogs.com/svg.latex?\int_a^b%20f(x)dx%20\approx%20h%20\sum_{i=0}^{n-1}%20f(a%20+%20ih%20+%20\frac{1}{2}%20h))
 
 
 ```python
